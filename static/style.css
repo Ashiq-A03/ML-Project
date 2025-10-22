@@ -7,17 +7,17 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    color: #eaf6fb; /* makes default text light */
+    color: #eaf6fb;
 }
 
 .container {
     max-width: 900px;
     margin: 50px auto;
-    background: rgba(10, 20, 35, 0.91); /* deep navy, nearly opaque, readable */
+    background: rgba(10, 20, 35, 0.91);
     padding: 35px 28px;
     border-radius: 16px;
     box-shadow: 0 12px 32px rgba(38,50,56,0.75);
-    color: #eaf6fb;  /* light color for headings and labels */
+    color: #eaf6fb;
 }
 
 h1, h2 {
@@ -31,7 +31,6 @@ form .form-group {
     gap: 18px 26px;
 }
 
-/* Input and select fields: white background, navy text for contrast */
 input, select {
     margin-top: 6px;
     padding: 10px 12px;
@@ -39,19 +38,18 @@ input, select {
     border: 1.5px solid #63a7d2;
     background: #f8f9fb;
     font-size: 1rem;
-    color: #143958;   /* readable navy text */
+    color: #143958;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Button: keep navy background, bright text */
 .full-width-btn {
     display: block;
     width: 100%;
     margin: 32px 0 0 0;
     padding: 16px 0;
     background: linear-gradient(90deg, #183679 0%, #255eb1 100%);
-    color: #eaf6fb; /* pale blue */
+    color: #eaf6fb;
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
@@ -65,21 +63,19 @@ input, select {
     background: linear-gradient(90deg, #255eb1 0%, #183679 100%);
 }
 
-/* Result box: pale blue background, navy text, round corners for modern look */
 .result {
     margin-top: 32px;
     padding: 22px 26px;
-    background-color: rgba(20, 35, 62, 0.91); /* deep navy, high contrast */
-    color: #f6fbff; /* very light text for good contrast */
+    background-color: rgba(20, 35, 62, 0.91);
+    color: #f6fbff;
     border-left: 6px solid #3da0e8;
     border-radius: 7px;
     box-shadow: 0 2px 8px rgba(44,62,80,0.13);
     width: 100%;
-    max-width: none;   /* ensures spans the full form width */
+    max-width: none;
     box-sizing: border-box;
 }
 
-/* Result heading is bright */
 .result h2 {
     color: #badcf9;
     margin: 0 0 14px 0;
@@ -87,8 +83,6 @@ input, select {
     font-weight: 700;
 }
 
-
-/* For small screens/mobile */
 @media (max-width: 900px) {
     form .form-group {
         grid-template-columns: 1fr;
@@ -102,3 +96,4 @@ input, select {
         max-width: 100%;
     }
 }
+
