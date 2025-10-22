@@ -5,23 +5,19 @@ from sklearn.preprocessing import LabelEncoder
 
 app = Flask(__name__)
 
-# 1. Load your CSV data
 df = pd.read_csv('student_data.csv')
 
-# 2. Encode categorical columns to match HTML form field names
 df['participation'] = LabelEncoder().fit_transform(df['participation'])
 df['parental_involvement'] = LabelEncoder().fit_transform(df['parental_involvement'])
 
-# X matches the HTML field ordering (except for gender/student_id which are unused in original logic)
 input_cols = [
     'attendance', 'avg_assignment_score', 'participation', 'study_hours',
     'assignments_submitted', 'quiz_score', 'project_score', 'previous_gpa',
     'extra_activities', 'parental_involvement'
 ]
 X = df[input_cols]
-y = df['performance']  # Your label column must be named 'performance' (or adjust here)
+y = df['performance']
 
-# 3. Fit your model
 model = RandomForestClassifier(n_estimators=100, random_state=42)
 model.fit(X, y)
 
@@ -54,3 +50,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
